@@ -9,6 +9,7 @@ vim.opt.mouse = 'a'	-- использование мышки во всех ре�
 vim.opt.ignorecase = true	-- игнорирование регистра при поиске
 vim.opt.smartcase = true	-- учитывает регистр с большими буквами
 vim.opt.wrap = true	-- перенос текста
+vim.opt.wildmenu='full'
 vim.opt.fileencoding = "utf-8"	-- encoding
 vim.opt.cursorline = true	-- подсветка текущей строки
 vim.cmd('colorscheme evening')	-- тема
@@ -27,10 +28,4 @@ vim.keymap.set("i", "(", "()<left>")
 vim.keymap.set("i", "[", "[]<left>")
 vim.keymap.set("i", "{", "{}<left>")
 
--- LSP	
-vim.lsp.start({
-  name = 'python',
-  cmd = {'pyright'},
-  root_dir = vim.fs.dirname(vim.fs.find({'setup.py', 'pyproject.toml'}, { upward = true })[1]),
-})
 
